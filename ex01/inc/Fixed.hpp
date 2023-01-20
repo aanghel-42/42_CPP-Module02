@@ -1,14 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: aanghel <aanghel@student.42.fr>            +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/19 01:47:59 by aanghel           #+#    #+#             */
-/*   Updated: 2023/01/19 01:57:53 by aanghel          ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
 
 #ifndef FIXED_HPP
 # define FIXED_HPP
@@ -26,8 +15,9 @@ class Fixed
 		Fixed(const int num);
 		Fixed(const float num);
 		Fixed(const Fixed& copy);
-		Fixed& operator=(const Fixed& copy);
 		~Fixed();
+
+		Fixed& operator=(const Fixed& copy);
 
 		int		toInt(void)const;
 		int 	getRawBits(void)const;
