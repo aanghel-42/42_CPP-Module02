@@ -37,15 +37,13 @@ class Fixed
 		//increment/decrement:
 		Fixed	operator++(int); //post
 		Fixed	operator--(int); //post
-		Fixed	&operator++();  //pre
-		Fixed	&operator--();  //pre
+		Fixed	operator++();  //pre
+		Fixed	operator--();  //pre
 		
 
 		//min and max
-		static Fixed const &min(Fixed const &obj1, Fixed const &obj2);
-		static Fixed const &max(Fixed const &obj1, Fixed const &obj2);
-		static Fixed &min(Fixed &obj1, Fixed &obj2);
-		static Fixed &max(Fixed &obj1, Fixed &obj2);
+		static Fixed min(Fixed obj1, Fixed obj2);
+		static Fixed max(Fixed obj1, Fixed obj2);
 
 		int		toInt(void)const;
 		int 	getRawBits(void)const;

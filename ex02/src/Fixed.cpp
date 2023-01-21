@@ -118,7 +118,7 @@ Fixed Fixed::operator--()
 Fixed Fixed::operator++(int)
 {
 	Fixed	tmp(*this);
-	operator++;
+	operator++();
 	return (tmp);
 }
 
@@ -129,6 +129,20 @@ Fixed Fixed::operator--(int)
 	return (tmp);
 } 
 
+//min & max
+Fixed Fixed::min(Fixed obj1, Fixed obj2)
+{
+	if (obj1 > obj2)
+		return (obj2);
+	return (obj1);
+}
+
+Fixed Fixed::max(Fixed obj1, Fixed obj2)
+{
+	if (obj1 > obj2)
+		return (obj1);
+	return (obj2);
+}
 
 Fixed::~Fixed()
 {
